@@ -2,23 +2,23 @@
 from __future__ import unicode_literals
 
 from rest_framework import viewsets
-from app.models import Product, ProductType
-from app.serializers import ProductSerializer, ProductTypeSerializer
+from app.models import Employee, EmployeeType
+from app.serializers import EmployeeSerializer, EmployeeTypeSerializer
 
 # Create your views here.
 
 
-class ProductTypeViewSet(viewsets.ModelViewSet):
+class EmployeeTypeViewSet(viewsets.ModelViewSet):
   """
-  API endpoint that allows producttypes to be viewed or edited.
+  API endpoint that allows employeetypes to be viewed or edited.
   """
-  queryset = ProductType.objects.all()
-  serializer_class = ProductTypeSerializer
+  queryset = EmployeeType.objects.all()
+  serializer_class = EmployeeTypeSerializer
 
 
-class ProductViewSet(viewsets.ModelViewSet):
+class EmployeeViewSet(viewsets.ModelViewSet):
   """
-  API endpoint that allows products to be viewed or edited.
+  API endpoint that allows employees to be viewed or edited.
   """
-  queryset = Product.objects.all()
-  serializer_class = ProductSerializer
+  queryset = Employee.objects.all()
+  serializer_class = EmployeeSerializer

@@ -5,25 +5,26 @@ from django.db import models
 
 # Create your models here.
 
-class ProductType(models.Model):
+class EmployeeType(models.Model):
   initials = models.CharField(max_length=5)
   description = models.CharField(max_length=100)
 
   class Meta:
-    db_table = "producttype"
+    db_table = "employeetype"
 
   def __unicode__(self):
     return u"%s" % self.description
 
 
-class Product(models.Model):
-  name = models.CharField(max_length=100)
-  costprice = models.IntegerField()
-  saleprice = models.IntegerField()
-  producttype = models.ForeignKey(ProductType)
+class Employee(models.Model):
+  firstname = models.CharField(max_length=100)
+  surname = models.CharField(max_length=100)
+  email = models.CharField(max_length=100)
+  password = models.CharField(max_length=100)
+  employeetype = models.ForeignKey(EmployeeType)
 
   class Meta:
-    db_table = "product"
+    db_table = "employee"
 
   def __unicode__(self):
-    return u"%s" % self.name
+    return u"%s" % self.email

@@ -1,12 +1,12 @@
-from app.models import Product, ProductType
+from app.models import Employee, EmployeeType
 from rest_framework import serializers
 
-class ProductTypeSerializer(serializers.ModelSerializer):
+class EmployeeTypeSerializer(serializers.ModelSerializer):
   class Meta:
-    model = ProductType
+    model = EmployeeType
     fields = ('id', 'initials', 'description')
 
-class ProductSerializer(serializers.ModelSerializer):
+class EmployeeSerializer(serializers.ModelSerializer):
   class Meta:
-    model = Product
-    fields = ('id', 'name', 'costprice', 'saleprice', 'producttype')
+    model = Employee
+    fields = ('id', 'firstname', 'surname', 'email', 'password', 'employeetype')
