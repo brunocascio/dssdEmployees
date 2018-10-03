@@ -19,7 +19,7 @@ class EmployeeType(models.Model):
 class Employee(models.Model):
   firstname = models.CharField(max_length=100)
   surname = models.CharField(max_length=100)
-  email = models.CharField(max_length=100)
+  email = models.EmailField()
   password = models.CharField(max_length=100)
   employeetype = models.ForeignKey(EmployeeType)
 

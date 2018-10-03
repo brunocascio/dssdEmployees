@@ -9,4 +9,5 @@ class EmployeeTypeSerializer(serializers.ModelSerializer):
 class EmployeeSerializer(serializers.ModelSerializer):
   class Meta:
     model = Employee
-    fields = ('id', 'firstname', 'surname', 'email', 'password', 'employeetype')
+    fields = ('id', 'firstname', 'surname', 'email', 'employeetype', 'password')
+    extra_kwargs = {'password': {'write_only': True}}
