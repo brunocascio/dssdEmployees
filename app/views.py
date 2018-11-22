@@ -20,5 +20,12 @@ class EmployeeViewSet(viewsets.ModelViewSet):
   """
   API endpoint that allows employees to be viewed or edited.
   """
-  queryset = Employee.objects.all()
   serializer_class = EmployeeSerializer
+  queryset = Employee.objects.all()
+
+  def get_queryset(self):
+    queryset = Employee.objects.all()
+    email = self.request.query_params.get('email', None)
+    if email is not None:
+      queryset = queryset.filter(email=email)
+    return queryset

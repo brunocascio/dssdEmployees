@@ -21,7 +21,7 @@ class Employee(models.Model):
   surname = models.CharField(max_length=100)
   email = models.EmailField()
   password = models.CharField(max_length=100)
-  employeetype = models.ForeignKey(EmployeeType)
+  employeetype = models.ForeignKey(EmployeeType, on_delete='CASCADE')
 
   class Meta:
     db_table = "employee"
