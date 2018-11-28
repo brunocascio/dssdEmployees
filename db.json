@@ -1,0 +1,32 @@
+[
+    {
+        "model": "app.employeetype",
+        "pk": 1,
+        "fields": {
+            "initials": "GR",
+            "description": "gerente"
+        }
+    },
+    {
+        "model": "app.employee",
+        "pk": 1,
+        "fields": {
+            "firstname": "Carlos",
+            "surname": "Galvan",
+            "email": "carlos@hola.com",
+            "password": "carlos",
+            "employeetype": 1
+        }
+    },
+    {
+        "model": "app.employee",
+        "pk": 2,
+        "fields": {
+            "firstname": "empleado",
+            "surname": "empleado",
+            "email": "empleado@example.com",
+            "password": "3mpl34d0",
+            "employeetype": 1
+        }
+    }
+]

@@ -2,16 +2,16 @@
 
 Tener instalado `python` y `pip`.
 
-`sudo pip install django djangorestframework`
-
-## Crear migraciones
-
-`python manage.py makemigrations`
+`pip install -r requirements.txt`
 
 ## Correr migraciones
 
 `python manage.py migrate`
 
-## Run Server
+## Correr fixture con data de pruebas
 
-`python manage.py runserver`
+`python manage.py loaddata db.json`
+
+## Levantar Server
+
+`python manage.py runserver 8000`
